@@ -1,0 +1,37 @@
+---
+---
+
+@import "mainResponsiveFunctions.scss";
+@import "extendingTools.scss";
+@import "colors.scss";
+@import "font.scss";
+@import "modal.scss";
+@import "elements.scss";
+@import "z-index.scss";
+@import "animation.scss";
+
+.NEWSmainContent {
+
+  // z-index in main.css
+  display: flex;
+  flex-direction:column;
+  flex-wrap: nowrap;
+
+  background-color: #0004cd;
+  min-height: 2000px !important;
+  padding-top: 200px;
+
+  @include stage00 {width: 1140px;}
+  @include stage01 {width: 1140px;}
+  @include stage02 {width: 1140px;}
+  @include stage03 {width: 1140px;}
+}
+
+.NewsItem {
+
+  align-self: center;
+
+  width: 90%;
+  padding: 10%;
+
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html id="no-fouc" lang="en" class="no-js">
+
+<!--  Setting Parameter -->
+
+
+
+  {% include head.html %}
+
+  <header>
+
+    {% include navigation.html %}
+
+  </header>
+
+<body>
+
+<div class="backgroundDiv"></div>
+<canvas id="world"></canvas>
+
+
+      <main>
+
+        {{ content }}
+
+      </main>
+
+
+      <footer>
+        {% comment %}{% include footer.html %}{% endcomment %}
+      </footer>
+
+
+    {% include js.html %}
+
+    <!-- <script>$("#no-fouc").delay(250).animate({"opacity": "1"}, 250);</script> -->
+  </body>
+
+</html>

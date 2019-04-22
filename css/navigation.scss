@@ -1,0 +1,57 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "mainResponsiveFunctions.scss";
+@import "extendingTools.scss";
+@import "colors.scss";
+@import "font.scss";
+@import "modal.scss";
+@import "elements.scss";
+@import "z-index.scss";
+@import "animation.scss";
+
+
+
+
+.navigationContainer {
+
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+
+  // z-index in main.css
+  position: fixed;
+  display: flex;
+
+  background-color: #000080;
+
+
+  @include stage00 {width: 1140px;height: 200px; min-height: 200px;}
+  @include stage01 {width: 1140px;height: 200px; min-height: 200px;}
+  @include stage02 {width: 1140px;height: 200px; min-height: 200px;}
+  @include stage03 {width: 1140px;height: 200px; min-height: 200px;}
+
+}
+
+.navigationImage {
+
+  @include stage00 {}
+  @include stage01 {}
+  @include stage02 {}
+  @include stage03 {}
+
+  height: 75px;
+
+  margin-top: 110px;
+  // width: 382px;
+  // height: 47px;
+
+}
+
+.contactContainer {
+  padding-left: 75px;
+}

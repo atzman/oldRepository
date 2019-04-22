@@ -1,0 +1,159 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "mainResponsiveFunctions.scss";
+@import "extendingTools.scss";
+@import "colors.scss";
+@import "font.scss";
+@import "modal.scss";
+@import "elements.scss";
+@import "z-index.scss";
+@import "animation.scss";
+
+// z-index control
+.backgroundDiv {
+    z-index: -2 !important;
+}
+#world {
+    z-index: -1 !important;
+
+    position: fixed !important;
+}
+
+.navigationContainer {
+
+  z-index: 999 !important;
+
+}
+
+.NEWSmainContent {
+
+    z-index: 998 !important;
+}
+
+html, body {
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.backgroundDiv {
+
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+
+  background: -moz-radial-gradient(center, ellipse cover, rgba(253,156,53,1) 0%, rgba(255,255,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(253,156,53,0.8) 0%,rgba(255,255,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(253,156,53,0.8) 0%,rgba(255,255,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   /* Old browsers */
+  background: radial-gradient(rgba(255,255,0,1), rgb(253,156,53));
+  background-repeat: no-repeat;
+
+  background-size: 400% 400%;
+
+  -webkit-animation: Gradient 60s ease infinite;
+  -moz-animation: Gradient 60s ease infinite;
+  animation: Gradient 60s ease infinite;
+}
+
+
+
+
+
+
+
+
+/* Set body background color */
+
+.controlResponsive {
+  @include stage00 { margin-left: 0px !important; margin-right: 0px !important; min-width: 100% !important; max-width: 100% !important;}
+  @include stage01 { margin-left: 0px !important; margin-right: 0px !important; min-width: 100% !important; max-width: 100% !important;}
+  @include stage02 { margin-left: 0px !important; margin-right: 0px !important; min-width: 100% !important; max-width: 100% !important;}
+  // @include stage03 {
+  //
+  //   width: 100%;
+  //   padding-right: 15px;
+  //   padding-left: 15px;
+  //   margin-right: auto;
+  //   margin-left: auto;
+  //   max-width: 1140px !important;
+  // }
+
+}
+
+
+.introduction {
+  @include stage00 {padding: 200px 0;}
+  @include stage01 {padding: 0 0 0;}
+  @include stage02 {padding: 100px 0;}
+  @include stage03 {padding: 100px 0;}
+
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+  justify-content: center;
+}
+.introductionTitle { justify-content: center; text-align: center;}
+.introductionText { justify-content: center; text-align: center;}
+
+.introductionImages {
+  @extend .transitionAllFast;
+
+    -webkit-filter: grayscale(100%);
+     -moz-filter: grayscale(100%);
+       -o-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+          filter: grayscale(100%);
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+  max-width: 200px;
+  justify-content: center; text-align: center;
+  margin: 25px;
+
+  &:hover {
+
+      -webkit-filter: grayscale(10%);
+      -moz-filter: grayscale(10%);
+      -o-filter: grayscale(10%);
+      -ms-filter: grayscale(10%);
+      filter: grayscale(10%);
+      cursor: pointer;
+
+      @extend .transformScale;
+
+
+  }
+}
+
+.introduction a {justify-content: center; text-align: center;}
+// Lets g the main Content Section a little responsive paddings mmmhm
+
+/* get away the dotted lines in moz */
+input::-moz-focus-inner {
+  border: 0 !important;
+	outline: none !important;
+}
+a:active {
+  outline: none !important;
+  border: 0 !important;
+}
+a {
+
+outline: medium none !important;
+}
+button:active {
+  outline: none !important;
+  border: 0 !important;
+}
+button {
+  outline: medium none !important;
+}
