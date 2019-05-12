@@ -1,0 +1,218 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "mainResponsiveFunctions.scss";
+@import "extendingTools.scss";
+@import "colors.scss";
+@import "font.scss";
+@import "modal.scss";
+@import "elements.scss";
+@import "z-index.scss";
+@import "animation.scss";
+
+
+.introductionContainer {
+
+  margin-left: -100px !important;
+  padding-top: 20px;
+  padding-left: 120px;
+  width:140%;
+  min-width: 140%;
+  background-color: $colorPurpleVar;
+  margin-top: 140px;
+
+  transform:rotate(-2deg);
+
+  @include widthLevel00 {min-height: 200px}
+  @include widthLevel01 {min-height: 200px}
+  @include widthLevel02 {min-height: 300px}
+  @include widthLevel03 {min-height: 400px}
+  @include widthLevel04 {min-height: 400px}
+  @include widthLevel05 {min-height: 400px}
+
+
+}
+
+.FLEX_IntroductionContentContainer {
+
+  padding-top: 20px;
+  max-width: 90vw;
+  display: flex;
+  justify-content: center;
+  transform:rotate(2deg);
+
+}
+
+.elementContainer {
+
+  margin-left: -100px !important;
+  padding-top: 20px;
+  padding-left: 120px;
+  width:140%;
+  min-width: 140%;
+
+  background-color: $colorBlue;
+  margin-top: 70px;
+
+  transform:rotate(3deg);
+
+  @include widthLevel00 {min-height: auto;}
+  @include widthLevel01 {min-height: auto;}
+  @include widthLevel02 {min-height: auto;}
+  @include widthLevel03 {min-height: auto;}
+  @include widthLevel04 {min-height: auto;}
+  @include widthLevel05 {min-height: auto;}
+
+}
+
+
+.elementContainerZappa {
+
+  margin-left: -100px !important;
+  padding-top: 20px;
+  padding-left: 120px;
+  width:140%;
+  min-width: 140%;
+
+  background-color: $colorPurpleMain;
+  margin-top: 70px;
+
+  transform:rotate(-2deg);
+
+  @include widthLevel00 {min-height: auto;}
+  @include widthLevel01 {min-height: auto;}
+  @include widthLevel02 {min-height: auto;}
+  @include widthLevel03 {min-height: auto;}
+  @include widthLevel04 {min-height: auto;}
+  @include widthLevel05 {min-height: auto;}
+
+}
+.FLEX_ElementContentContainerZappa {
+  opacity: 0.9;
+  padding-top: 20px;
+  max-width: 90vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  transform:rotate(2deg);
+}
+
+.FLEX_ElementContentContainer {
+  padding-top: 20px;
+  max-width: 90vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  transform:rotate(-3deg);
+}
+
+.sectionHeaders h2,h3,h4,h5 {
+  @include widthLevel00 {font-size: 80%;}
+  align-self: center;
+  font-weight: 600;
+  color: white;
+
+}
+
+
+.sectionHeaders h6 {
+  @include widthLevel00 {font-size: 80%;}
+  align-self: center;
+  font-weight: 300;
+  color: white;
+
+}
+
+.sectionHeaders h1 {
+  @include widthLevel00 {font-size: 110%;}
+  align-self: center;
+  font-weight: 800;
+  color: white;
+
+}
+
+
+.frontImg {
+
+  align-self: center;
+  @extend .shadowBox;
+
+  @include widthLevel00 {margin-top: 10px; margin-bottom: 20px;max-width: 90vw;}
+  @include widthLevel01 {margin-top: 10px; margin-bottom: 20px;max-width: 90vw;}
+  @include widthLevel02 {margin-top: 10px; margin-bottom: 20px;max-width: 90vw;}
+  @include widthLevel03 {margin-top: 10px; margin-bottom: 20px;max-width: 90vw;}
+  @include widthLevel04 {margin-top: 10px; margin-bottom: 20px;max-width: 90vw;}
+  @include widthLevel05 {margin-top: 10px; margin-bottom: 20px;max-width: 90vw;}
+  flex: 1;
+  border-style: solid;
+  border-color: white !important;
+  border-width: 5px;
+  border-radius: 25px 7.5px;
+
+}
+
+
+.elementContainertitties {
+
+  margin-left: -100px !important;
+  padding-top: 20px;
+  padding-left: 120px;
+  width:140%;
+  min-width: 140%;
+
+  background-color: $titties;
+  margin-top: 70px;
+
+  transform:rotate(1deg);
+
+  @include widthLevel00 {min-height: auto;}
+  @include widthLevel01 {min-height: auto;}
+  @include widthLevel02 {min-height: auto;}
+  @include widthLevel03 {min-height: auto;}
+  @include widthLevel04 {min-height: auto;}
+  @include widthLevel05 {min-height: auto;}
+
+}
+.FLEX_ElementContentContainertitties {
+  opacity: 0.9;
+  padding-top: 20px;
+  max-width: 90vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  transform:rotate(-1deg);
+}
+
+
+
+.elementContainerHausordnung {
+
+  margin-left: -100px !important;
+  padding-top: 20px;
+  padding-left: 120px;
+  width:140%;
+  min-width: 140%;
+
+  background-color: $colorPurple;
+  margin-top: 70px;
+
+  transform:rotate(-2deg);
+
+  @include widthLevel00 {min-height: auto;}
+  @include widthLevel01 {min-height: auto;}
+  @include widthLevel02 {min-height: auto;}
+  @include widthLevel03 {min-height: auto;}
+  @include widthLevel04 {min-height: auto;}
+  @include widthLevel05 {min-height: auto;}
+
+}
+.FLEX_ElementContentContainerHausordnung {
+  opacity: 0.9;
+  padding-top: 20px;
+  max-width: 90vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  transform:rotate(2deg);
+}

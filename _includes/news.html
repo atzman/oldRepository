@@ -1,0 +1,31 @@
+
+
+<div class="FLEX_NewsContainer shadowBox mod_scale_fluid">
+  <div class="headerNews">
+    <div class="Newsbutton" id="newsToggle">
+      <h1>News</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="FLEX_NewsContentContainer">
+  <div class="FLEX_NewsContent">
+
+      {% for item in site.data.news %}
+
+      <div class="mod_scale_fluid">
+        <h2>{{ item[1].title }}</h2>
+        <div class="newsDate">{{ item[1].date }}</div>
+        {% if item[1].img_URL %}
+        <div class="newsImageContainer">
+          <img class="newsImg" src="{{ site.baseurl }}/assets/images/{{ item[1].img_URL}}">
+        </div> 
+        {% endif %}
+        <div class="newsSubtitle">{{ item[1].subtitle }}</div>
+      </div>
+
+     {% endfor %}
+
+  </div>
+</div>

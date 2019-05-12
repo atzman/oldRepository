@@ -24,19 +24,23 @@
 }
 
 .item span {
-  background: white !important; 
+  background: white !important;
 }
 .item {
 
-   top: 10px;
-   width: 55px;
-   height: 50px;
+  @include widthLevel00{left: 10px; top:10px; width:55px; height: 50px;}
+  @include widthLevel01{left: 10px; top:10px; width:55px; height: 50px;}
+  @include widthLevel02{left: 10px; top:10px; width:55px; height: 50px;}
+  @include widthLevel03{left: 100px; top:10px; width:55px; height: 50px;}
+  @include widthLevel04{left: 16%; top:10px; width:55px; height: 50px;}
+  @include widthLevel05{left: 16%; top:10px; width:55px; height: 50px;}
+
    background: rgba(0,0,0,0);
-   margin: 5px;
-   padding: 5px;
+   margin: 0 5px 5px 5px;
+   padding: 0 5px 5px 5px;
    box-shadow: 0 0 10px rgba(0,0,0,.1);
    cursor: pointer;
-   position: relative;
+   position: fixed !important;
    overflow: hidden;
    border-radius: 4px;
    backface-visibility: hidden;

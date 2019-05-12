@@ -137,27 +137,3 @@ $stageThree: 1199px;
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-.screenshots {
-
-  @extend .transitionAllFast;
-
-  &:hover {
-
-      @extend .transformScale;
-      cursor: pointer;
-
-
-}
-}

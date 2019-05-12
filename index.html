@@ -3,19 +3,4 @@ layout: default
 ---
 
 
-<div class="container">
-    <div class="NEWSmainContent">
-
-    {% for item in site.data.news %}
-
-      <div class="NEWSItem">
-
-        {{ item[0].title }}
-        {{ item[0].date }}
-        {{ item[0].text }}
-
-      </div>
-    {% endfor %}
-
-    </div>
-</div>
+{% include introduction.html %}

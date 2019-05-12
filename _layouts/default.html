@@ -9,19 +9,37 @@
 
   <header>
 
+
     {% include navigation.html %}
+
+
 
   </header>
 
 <body>
 
 <div class="backgroundDiv"></div>
+
+<div class="submarine"></div>
+
 <canvas id="world"></canvas>
+
+<div class="display hide">{% include subMenu.html %}</div>
+
+
 
 
       <main>
 
+
+        {% include news.html %}
         {{ content }}
+
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+        </div>
 
       </main>
 
@@ -33,7 +51,6 @@
 
     {% include js.html %}
 
-    <!-- <script>$("#no-fouc").delay(250).animate({"opacity": "1"}, 250);</script> -->
   </body>
 
 </html>

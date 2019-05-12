@@ -21,15 +21,50 @@
     position: fixed !important;
 }
 
+#world.putInFrontOfView {
+  z-index: 9999 !important;
+  opacity: 0.8;
+}
+
 .navigationContainer {
 
-  z-index: 999 !important;
+  z-index: 997 !important;
 
 }
 
+.submarine {
+  min-height: 100%;
+
+  z-index: -1 !important;
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  background:  url('../assets/images/favicon.png');
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: 10% 60%;
+  opacity: 0.2;
+
+
+    -webkit-animation: Gradient 30s ease infinite;
+    -moz-animation: Gradient 30s ease infinite;
+    animation: Gradient 30s ease infinite;
+}
+
+
 .NEWSmainContent {
 
-    z-index: 998 !important;
+    z-index: 996 !important;
+}
+
+.display {
+  z-index: 998 !important;
+}
+.navigationImage {
+  z-index: 9999 !important;
+}
+.burgerContainer, #initiate, .item {
+  z-index: 9999 !important;
 }
 
 html, body {
@@ -47,18 +82,18 @@ html, body {
   min-height: 100%;
   position: fixed;
 
-  background: -moz-radial-gradient(center, ellipse cover, rgba(253,156,53,1) 0%, rgba(255,255,0,1) 100%); /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(253,156,53,0.8) 0%,rgba(255,255,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, rgba(253,156,53,0.8) 0%,rgba(255,255,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-radial-gradient(center, ellipse cover, $orangeBackground 0%, $yellowBackground 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, $orangeBackground 0%,$yellowBackground 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, $orangeBackground 0%,$yellowBackground 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    /* Old browsers */
-  background: radial-gradient(rgba(255,255,0,1), rgb(253,156,53));
+  background: radial-gradient($yellowBackground, $orangeBackground);
   background-repeat: no-repeat;
 
-  background-size: 400% 400%;
+  background-size: 200% 200%;
 
-  -webkit-animation: Gradient 60s ease infinite;
-  -moz-animation: Gradient 60s ease infinite;
-  animation: Gradient 60s ease infinite;
+  -webkit-animation: Gradient 30s ease infinite;
+  -moz-animation: Gradient 30s ease infinite;
+  animation: Gradient 30s ease infinite;
 }
 
 
@@ -156,4 +191,10 @@ button:active {
 }
 button {
   outline: medium none !important;
+}
+
+
+body {
+  overflow: auto;
+  overflow-x: hidden !important;
 }

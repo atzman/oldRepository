@@ -19,39 +19,129 @@
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-
 
   // z-index in main.css
   position: fixed;
   display: flex;
 
-  background-color: #000080;
+  justify-content: center;
 
-
-  @include stage00 {width: 1140px;height: 200px; min-height: 200px;}
-  @include stage01 {width: 1140px;height: 200px; min-height: 200px;}
-  @include stage02 {width: 1140px;height: 200px; min-height: 200px;}
-  @include stage03 {width: 1140px;height: 200px; min-height: 200px;}
+  background-color: $navigation;
+  
+  @include widthLevel00 {width: 100%; min-width: 100%; max-width: 100%;height: 100px; min-height: 100px;}
+  @include widthLevel01 {width: 100%; min-width: 100%; max-width: 100%;height: 100px; min-height: 100px;}
+  @include widthLevel02 {width: 100%; min-width: 100%; max-width: 100%;height: 120px; min-height: 120px;}
+  @include widthLevel03 {width: 100%; min-width: 100%; max-width: 100%;height: 120px; min-height: 120px;}
+  @include widthLevel04 {width: 100%; min-width: 100%; max-width: 100%;height: 120px; min-height: 120px;}
+  @include widthLevel05 {width: 100%; min-width: 100%; max-width: 100%;height: 150px; min-height: 150px;}
 
 }
 
 .navigationImage {
 
-  @include stage00 {}
-  @include stage01 {}
-  @include stage02 {}
-  @include stage03 {}
+  @include widthLevel00 { left: 72px; height: 28px; margin-top: 20px; }
+  @include widthLevel01 { height: 30px; margin-top: 20px; }
+  @include widthLevel02 { height: 60px; margin-top: 30px; }
+  @include widthLevel03 { height: 60px; margin-top: 30px; }
+  @include widthLevel04 { height: 60px; margin-top: 30px; }
+  @include widthLevel05 { height: 85px; margin-top: 30px; }
+  @extend .transitionAllFast;
+  position: fixed !important;
+  z-index: 9999 !important;
 
-  height: 75px;
+}
+.phonenumber {
+  display: inline;
+  @include widthLevel00 { color: $yellowBackground;}
+  @include widthLevel01 { color: $yellowBackground;}
+  @include widthLevel02 { color: $yellowBackground;}
+  @include widthLevel03 { color: $yellowBackground;}
+  @include widthLevel04 { color: $yellowBackground;}
+  @include widthLevel05 { color: $yellowBackground;}
+}
+.contactContainerMobile {
 
-  margin-top: 110px;
-  // width: 382px;
-  // height: 47px;
+  display: inline-block;
+  overflow: hidden;
+  @include widthLevel00 { margin-left: 5px; margin-top: 60px;}
+  @include widthLevel01 { margin-left: 5px; margin-top: 60px;}
+  @include widthLevel02 { display: none !important;}
+  @include widthLevel03 { display: none !important;}
+  @include widthLevel04 { display: none !important;}
+  @include widthLevel05 { display: none !important;}
+
+}
+.contactContainerMobile h5 {
+  font-size: 0.85em;
+  color: white;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.contactContainerDesktop {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  @include widthLevel00 { display: none !important;}
+  @include widthLevel01 { display: none !important;}
+  @include widthLevel02 { margin-top: 100px;}
+  @include widthLevel03 { margin-top: 100px;}
+  @include widthLevel04 { margin-top: 100px;}
+  @include widthLevel05 { margin-top: 120px;}
 
 }
 
-.contactContainer {
-  padding-left: 75px;
+.contactContainerDesktop h5 {
+  align-self: center;
+}
+
+
+.display {
+
+  background-color: rgba(0,0,0,0.9);
+  transition: height 0.5s ease;
+  height: 100% !important;
+  width: 100% !important;
+
+  position: fixed;
+  margin-top: 0px;
+
+  display: flex;
+
+}
+
+.display.hide {
+
+  height: 0px !important;
+
+}
+
+@-webkit-keyframes bounce {
+
+  animation-iteration-count: 1;
+        0% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+
+  30%{
+    transform: scale(1,0.8) translate(0px, 10px);
+  }
+
+  75%{
+    transform: scale(1,1.1) translate(0px, -25px);
+  }
+
+ 100% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+}
+
+
+.navigationImage.bounce {
+     -webkit-animation: bounce 0.35s;
+}
+
+.navigationElement.bounce {
+     -webkit-animation: bounce 0.35s;
 }

@@ -14,6 +14,24 @@
    });
 })(jQuery);
 
+$("#initiate").on("click",function(){
+
+   $(".display").toggleClass("hide");
+   $("#world").toggleClass("putInFrontOfView");
+   $(".navigationImage").toggleClass("bounce");
+   $(".subMenu").toggleClass("hide");
+   $(".subMenuElements").toggleClass("bounce");
+
+});
+$("#world").on("click",function(){
+  $(".display").toggleClass("hide");
+  $("#initiate").toggleClass("active");
+  $(".navigationImage").toggleClass("bounce");
+  $("#world").toggleClass("putInFrontOfView");
+  $(".subMenu").toggleClass("hide");
+  $(".subMenuElements").toggleClass("bounce");
+
+});
 
 const rippleElements = document.getElementsByClassName("myRipple");
 

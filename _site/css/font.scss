@@ -35,32 +35,65 @@ $h5-max: 1rem;
 $h6-min: (1rem / $mod_1);
 $h6-max: (1rem / $mod_2);
 
+@mixin fluid-type($properties, $min-screen, $max-screen, $min-value, $max-value) {
+  & {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
 
-// Apply fluid type mixin
-//
-// .mod_scale_fluid {
-// 	h1{
-// 		@include fluid-type(font-size,37.5rem, 80rem, $h1-min, $h1-max);
-// 	}
-//
-// 	h2{
-// 		@include fluid-type(font-size,37.5rem, 80rem, $h2-min, $h2-max);
-// 	}
-//
-// 	h3{
-// 		@include fluid-type(font-size,37.5rem, 80rem, $h3-min, $h3-max);
-// 	}
-//
-// 	h4{
-// 		@include fluid-type(font-size,37.5rem, 80rem, $h4-min, $h4-max);
-// 	}
-//
-// 	h5{
-// 		@include fluid-type(font-size,37.5rem, 80rem, $h5-min, $h5-max);
-// 	}
-//
-// 	h6{
-// 		@include fluid-type(font-size, 37.5rem, 80rem, $h6-min, $h6-max);
-// 	}
-//
-// }
+    @media screen and (min-width: $min-screen) {
+      @each $property in $properties {
+        #{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value);
+      }
+    }
+
+    @media screen and (min-width: $max-screen) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+}
+
+.mod_scale_fluid {
+	h1{
+		@include fluid-type(font-size,37.5rem, 80rem, $h1-min, $h1-max);
+    color: white !important;
+    font-weight: bold;
+	}
+
+	h2{
+		@include fluid-type(font-size,37.5rem, 80rem, $h2-min, $h2-max);
+    color: white !important;
+    font-weight: bold;
+	}
+
+	h3{
+		@include fluid-type(font-size,37.5rem, 80rem, $h3-min, $h3-max);
+    color: white !important;
+    font-weight: bold;
+	}
+
+	h4{
+		@include fluid-type(font-size,37.5rem, 80rem, $h4-min, $h4-max);
+    color: white !important;
+    font-weight: bold;
+	}
+
+	h5{
+		@include fluid-type(font-size,37.5rem, 80rem, $h5-min, $h5-max);
+    color: white !important;
+    font-weight: bold;
+	}
+
+	h6{
+		@include fluid-type(font-size, 37.5rem, 80rem, $h6-min, $h6-max);
+    color: white !important;
+    font-weight: bold;
+	}
+
+}
+
+html p {
+  color: white;
+}

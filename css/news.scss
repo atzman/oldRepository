@@ -1,4 +1,5 @@
 ---
+# Front matter comment to ensure Jekyll properly reads file.
 ---
 
 @import "mainResponsiveFunctions.scss";
@@ -10,28 +11,146 @@
 @import "z-index.scss";
 @import "animation.scss";
 
-.NEWSmainContent {
 
-  // z-index in main.css
+.FLEX_NewsContainer {
+
+    background-color: $colorPurpleMain;
+
+    @include widthLevel00 { padding-top: 100px; min-height: 120px;}
+    @include widthLevel01 { padding-top: 100px; min-height: 120px;}
+    @include widthLevel02 { padding-top: 130px; min-height: 150px;}
+    @include widthLevel03 { padding-top: 130px; min-height: 150px;}
+    @include widthLevel04 { padding-top: 130px; min-height: 150px;}
+    @include widthLevel05 { padding-top: 200px; min-height: 250px;}
+
+    width:140%;
+    min-width:140%;
+
+
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    transform:rotate(4deg);
+
+    @extend .transitionAllNormal;
+
+}
+
+.FLEX_NewsContainer.toggleNews {
+  transform:rotate(0deg);
+
+}
+
+.headerNews {
+
+  @include widthLevel00 { margin-left: 80px; margin-top: 10px;}
+  @include widthLevel01 { margin-left: 80px; margin-top: 10px;}
+  @include widthLevel02 { margin-left: 80px; margin-top: 10px;}
+  @include widthLevel03 { margin-left: 80px; margin-top: 10px;}
+  @include widthLevel04 { margin-left: 80px; margin-top: 10px;}
+  @include widthLevel05 { margin-left: 80px; margin-top: 100px;}
+
+}
+
+.Newsbutton {
+
+    position: relative;
+    text-decoration: none;
+}
+
+.Newsbutton::after {
+
+  transition: .6s;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background: white;
+  left: 50%;
+  bottom: -25%;
+  transform: translate(-50%, -50%);
+
+}
+
+.Newsbutton:hover::after {
+  width: 100%;
+}
+
+.Newsbutton:hover {
+  cursor: pointer;
+}
+
+
+
+
+.FLEX_NewsContentContainer {
+
+  margin-top: -80px;
+  max-height: 0vh;
+
+  @extend .transitionMaxHeight;
+
   display: flex;
-  flex-direction:column;
-  flex-wrap: nowrap;
-
-  background-color: #0004cd;
-  min-height: 2000px !important;
-  padding-top: 200px;
-
-  @include stage00 {width: 1140px;}
-  @include stage01 {width: 1140px;}
-  @include stage02 {width: 1140px;}
-  @include stage03 {width: 1140px;}
+  overflow: hidden;
+  justify-content: center;
 }
 
-.NewsItem {
+.FLEX_NewsContentContainer.toggleNews {
+  max-height: 20000px;
+}
 
+$flexNewsWidthMobile: 95vw;
+$flexNewsWidthDesktop: 90vw;
+
+.FLEX_NewsContent {
+
+  @include widthLevel00 {padding: 100px 2.5vw 100px 2.5vw; width: $flexNewsWidthMobile;}
+  @include widthLevel01 {padding: 100px 2.5vw 100px 2.5vw; width: $flexNewsWidthMobile;}
+  @include widthLevel02 {padding: 100px 5vw 100px 5vw; width: $flexNewsWidthDesktop;}
+  @include widthLevel03 {padding: 100px 5vw 100px 5vw; width: $flexNewsWidthDesktop;}
+
+  border-radius: 15px 50px;
   align-self: center;
+  display: flex;
+  flex-direction: column;
 
-  width: 90%;
-  padding: 10%;
+  background-color: $colorPurple;
+}
+
+.newsDate {
+
+  font-size: 0.8rem;
+  font-style: italic;
+  color: white;
+}
+
+
+.newsSubtitle {
+
+  font-size: 0.8rem;
+  font-style: normal;
+  color: white;
+}
+
+.newsImageContainer {
+
+  @include widthLevel00 {padding: 10px 0px 10px 0px; width: $flexNewsWidthMobile - 5vw; max-width: $flexNewsWidthMobile - 5vw;}
+  @include widthLevel01 {padding: 10px 0px 10px 0px; width: $flexNewsWidthMobile - 5vw; max-width: $flexNewsWidthMobile - 5vw;}
+  @include widthLevel02 {padding: 10px 0px 10px 0px; width: $flexNewsWidthDesktop - 10vw; max-width: $flexNewsWidthDesktop - 10vw;}
+  @include widthLevel03 {padding: 10px 0px 10px 0px; width: $flexNewsWidthDesktop - 10vw; max-width: $flexNewsWidthDesktop - 10vw;}
+
+  display: flex;
+  justify-content: center;
+}
+.newsImg {
+  align-self: center;
+  @extend .shadowBox;
+
+  border-style: solid;
+  border-color: white !important;
+  border-width: 5px;
+  border-radius: 25px 7.5px;
 
 }
+
+.newsImg:hover { }
