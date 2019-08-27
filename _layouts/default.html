@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html id="no-fouc" lang="en" class="no-js">
+<html lang="en" class="no-js">
 
 <!--  Setting Parameter -->
+<link href="https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap" rel="stylesheet">
 
 {% include head.html %}
 
 <header>
-    {% include navigation.html %}
+
+    {% comment %}{% include navigation.html %}{% endcomment %}
+
 </header>
 
 <body>
 
   <main>
+    {{ content }}
   </main>
-
 
   <footer>
     {% comment %}{% include footer.html %}{% endcomment %}
   </footer>
 
+  {% comment %}{% include js.html %}{% endcomment %}
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+  <script>
+    var image = document.getElementsByClassName('thumbnail');
+    new simpleParallax(image, {
+	     scale: 1.8
+   });
 
-  {% include js.html %}
 
-  </body>
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{{ site.baseur }}/assets/js/scrollOffset.js"></script>
+
+</body>
 
 </html>
