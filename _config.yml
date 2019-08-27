@@ -3,7 +3,7 @@ title: atzman music
 email: atzmanmusic@chello.at
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jasparkety.github.io" # the base hostname & protocol for your site
+url: "atzman.github.io"
 
 
 # Build settings
@@ -18,20 +18,8 @@ defaults:
    values:
      layout: "default"
 
-
-collections:
-  jobs:
-    output: true
-  articles:
-      output: true
-  tutorials:
-      output: true
-
 sass:
   sass_dir: css
 
 plugins:
   - jekyll-redirect-from
-
-# Google Analytics Cide
-google_analytics: 
