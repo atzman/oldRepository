@@ -1,5 +1,5 @@
 $(window).on('load', function() {
-
+  
   $('.atzman-intro-container').css( "opacity", "1" );
   $('.navigation-bar').css( "opacity", "1" );
 
@@ -21,7 +21,8 @@ $(window).on('load', function() {
 
     if( (800 - $(window).scrollTop()) > 0 ) {
       var scroll_position = 800 - ( $(window).scrollTop() ) ;
-    } else { var scroll_position = 0; }
+    } else {
+      var scroll_position = 0; }
 
       $('.navigation-bar').css( "margin-top", scroll_position );
 
