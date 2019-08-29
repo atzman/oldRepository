@@ -15,10 +15,10 @@
   max-height: 500px;
 
   @include widthLevel00 { padding-top: 20px; }
-
-  @include widthLevel01 { padding-top: 75px; }
-  @include widthLevel02 { padding-top: 75px; }
+  @include widthLevel01 { padding-top: 40px; }
+  @include widthLevel02 { padding-top: 60px; }
   @include widthLevel03 { padding-top: 75px; }
+
   @include widthLevel04 { padding-top: 75px; }
   @include widthLevel05 { padding-top: 75px; }
 
@@ -29,11 +29,12 @@
 
     justify-content: flex-start;
     align-items: flex-start;
-    @include widthLevel00 { padding-left: 20px; min-width: 150px; max-width: 150px !important;}
 
-    @include widthLevel01 { max-width: 100px; }
-    @include widthLevel02 { max-width: 300px; }
-    @include widthLevel03 { max-width: 300px; }
+    @include widthLevel00 { padding-left: 20px; min-width: 150px; max-width: 150px ;}
+    @include widthLevel01 { padding-left: 20px; min-width: 150px; max-width: 150px ;}
+    @include widthLevel02 { padding-left: 25px; min-width: 150px; max-width: 300px ;}
+    @include widthLevel03 { padding-left: 25px; min-width: 150px; max-width: 300px ; }
+
     @include widthLevel04 { max-width: 300px; }
     @include widthLevel05 { max-width: 300px; }
     max-height: 400px;
@@ -46,27 +47,15 @@
   align-items: center;
   flex-direction: column;
 
-  @include widthLevel00 { min-width: 150px; }
+  @include widthLevel00 { min-width: 100px; max-width: 100px; padding-left: 40px; }
+  @include widthLevel01 { min-width: 100px; max-width: 100px; padding-left: 60px; }
+  @include widthLevel02 { min-width: 175px; max-width: 175px; padding-left: 60px; }
+  @include widthLevel03 { min-width: 175px; max-width: 175px; padding-left: 60px; }
 
-  @include widthLevel01 { min-width: 100px; }
-  @include widthLevel02 { min-width: 175px; }
-  @include widthLevel03 { min-width: 175px; }
   @include widthLevel04 { min-width: 175px; }
   @include widthLevel05 { min-width: 175px; }
   max-height: 400px;
 
-}
-
-.box-shadow-effect {
-        box-shadow: 5px 17px 22px -8px rgba(9, 30, 66, 0.25), 0 0 5px rgba(9, 30, 66, 0.31);
-}
-
-.box-shadow-effect-white {
-        box-shadow: 5px 17px 22px -8px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.1);
-
-}
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .intro-gallery-element {
@@ -86,6 +75,7 @@
   @include widthLevel00 { max-width: 100px; }
   @include widthLevel01 { max-width: 100px; }
   @include widthLevel02 { max-width: 150px; }
+
   @include widthLevel03 { max-width: 150px; }
   @include widthLevel04 { max-width: 150px; }
   @include widthLevel05 { max-width: 150px; }
@@ -101,11 +91,11 @@
 
 .intro-maps-container, .mapouter {
 
-  @include widthLevel00 {   min-width: 200px; max-width: 200px; max-height: 200px; align-items: flex-start; }
+  @include widthLevel00 {   min-width: 175px; max-width: 175px; max-height: 175px; align-items: flex-start; }
+  @include widthLevel01 {   min-width: 200px; max-width: 200px; max-height: 200px; align-items: flex-start; }
+  @include widthLevel02 {   display: none; }
+  @include widthLevel03 {   display: none; }
 
-  @include widthLevel01 {   max-width: 100px; align-items: center;}
-  @include widthLevel02 {   max-width: 140px; align-items: center;}
-  @include widthLevel03 {   min-width: 500px; align-items: center;}
   @include widthLevel04 {   min-width: 500px; align-items: center;}
   @include widthLevel05 {   min-width: 500px; align-items: center;}
 
@@ -114,7 +104,10 @@
 .intro-maps-container {
   padding-left: 20px;
   display: flex;
-  @include widthLevel00 { justify-content: flex-start; align-items: flex-start;}
+
+  @include widthLevel00 { justify-content: flex-start; align-items: flex-start; padding-top: 20px;}
+  @include widthLevel01 { justify-content: flex-start; align-items: flex-start; padding-top: 30px;}
+
   justify-content: center;
 
 }
@@ -124,7 +117,12 @@
   position:relative;
   text-align:center;
   align-self: center;
-  @include widthLevel00 { align-self: flex-start;text-align: center;  padding-top: 20px; }
+
+  @include widthLevel00 { align-self: flex-start;text-align: center; }
+  @include widthLevel01 { align-self: flex-start;text-align: center; }
+
+  @include widthLevel04 {   min-width: 400px; min-height: 400px; }
+  @include widthLevel05 {   min-width: 400px; min-height: 400px; }
 }
 
 .gmap_canvas {
@@ -132,14 +130,19 @@
   overflow:hidden;
   background:none!important;
 
-  @include widthLevel00 {   min-width:200px; max-width: 200px; max-height: 200px; }
-
-  @include widthLevel01 {   max-width: 400px; }
+  @include widthLevel00 {   min-width:175px; max-width: 175px; max-height: 175px; }
+  @include widthLevel01 {   min-width:200px; max-width: 200px; max-height: 200px; }
   @include widthLevel02 {   max-width: 400px; }
   @include widthLevel03 {   min-width: 400px; }
-  @include widthLevel04 {   min-width: 400px; }
-  @include widthLevel05 {   min-width: 400px; }
 
+  @include widthLevel04 {   min-width: 400px; min-height: 400px; }
+  @include widthLevel05 {   min-width: 400px; min-height: 400px; }
+
+}
+
+#gmap_canvas {
+  @include widthLevel04 {   min-width: 400px; min-height: 400px; width: 400px; height: 400px;}
+  @include widthLevel05 {   min-width: 400px; min-height: 400px; width: 400px; height: 400px;}
 }
 
 .intro-social-container {
@@ -149,20 +152,25 @@
   justify-content: center;
   align-items: center;
 
-  @include widthLevel00 { max-width: 100px; padding-left: 20px; padding-top: 20px; }
-  @include widthLevel01 { max-width: 100px; }
-  @include widthLevel02 { max-width: 150px; }
+  @include widthLevel00 { min-width: 100px; padding-left: 20px; padding-top: 20px; flex-flow: row; justify-content: flex-start; flex-wrap: wrap;}
+  @include widthLevel01 { min-width: 100px; padding-left: 20px; padding-top: 30px; flex-flow: row; justify-content: flex-start; flex-wrap: wrap;}
+  @include widthLevel02 { min-width: 150px; padding-left: 50px; flex-flow: row; justify-content: flex-start; flex-wrap: wrap;}
+
+
   @include widthLevel03 { min-width: 90px; }
   @include widthLevel04 { min-width: 90px; }
   @include widthLevel05 { min-width: 90px; }
   max-height: 400px;
 
 }
+
 .intro-social-element {
 
+  @include widthLevel00 { max-width: 40px; -webkit-transform: scale(1); transform: scale(1); padding: 5px;}
+  @include widthLevel01 { max-width: 40px; -webkit-transform: scale(1); transform: scale(1); padding: 5px;}
+  @include widthLevel02 { max-width: 80px; -webkit-transform: scale(1); transform: scale(1); padding: 5px;}
 
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
+
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   align-self: center;
@@ -175,4 +183,17 @@
     cursor: pointer;
   }
 
+}
+
+
+.box-shadow-effect {
+        box-shadow: 5px 17px 22px -8px rgba(9, 30, 66, 0.25), 0 0 5px rgba(9, 30, 66, 0.31);
+}
+
+.box-shadow-effect-white {
+        box-shadow: 5px 17px 22px -8px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.1);
+
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
