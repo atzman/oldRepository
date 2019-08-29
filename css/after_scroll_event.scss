@@ -1,0 +1,178 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "mainResponsiveFunctions.scss";
+
+// This class is disabled as display: none;
+// After the page is loaded it will switch to
+// display: flex
+.after-scroll-top-banner-container {
+
+  justify-content: center;
+
+  min-height: 500px;
+  max-height: 500px;
+
+  @include widthLevel00 { padding-top: 20px; }
+
+  @include widthLevel01 { padding-top: 75px; }
+  @include widthLevel02 { padding-top: 75px; }
+  @include widthLevel03 { padding-top: 75px; }
+  @include widthLevel04 { padding-top: 75px; }
+  @include widthLevel05 { padding-top: 75px; }
+
+
+}
+
+.intro-text-container {
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include widthLevel00 { padding-left: 20px; min-width: 150px; max-width: 150px !important;}
+
+    @include widthLevel01 { max-width: 100px; }
+    @include widthLevel02 { max-width: 300px; }
+    @include widthLevel03 { max-width: 300px; }
+    @include widthLevel04 { max-width: 300px; }
+    @include widthLevel05 { max-width: 300px; }
+    max-height: 400px;
+}
+
+.intro-gallery-container {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  @include widthLevel00 { min-width: 150px; }
+
+  @include widthLevel01 { min-width: 100px; }
+  @include widthLevel02 { min-width: 175px; }
+  @include widthLevel03 { min-width: 175px; }
+  @include widthLevel04 { min-width: 175px; }
+  @include widthLevel05 { min-width: 175px; }
+  max-height: 400px;
+
+}
+
+.box-shadow-effect {
+        box-shadow: 5px 17px 22px -8px rgba(9, 30, 66, 0.25), 0 0 5px rgba(9, 30, 66, 0.31);
+}
+
+.box-shadow-effect-white {
+        box-shadow: 5px 17px 22px -8px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.1);
+
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.intro-gallery-element {
+
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+
+  align-self: center;
+
+  @include widthLevel00 { max-width: 100px; }
+  @include widthLevel01 { max-width: 100px; }
+  @include widthLevel02 { max-width: 150px; }
+  @include widthLevel03 { max-width: 150px; }
+  @include widthLevel04 { max-width: 150px; }
+  @include widthLevel05 { max-width: 150px; }
+
+  &:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+}
+
+
+.intro-maps-container, .mapouter {
+
+  @include widthLevel00 {   min-width: 200px; max-width: 200px; max-height: 200px; align-items: flex-start; }
+
+  @include widthLevel01 {   max-width: 100px; align-items: center;}
+  @include widthLevel02 {   max-width: 140px; align-items: center;}
+  @include widthLevel03 {   min-width: 500px; align-items: center;}
+  @include widthLevel04 {   min-width: 500px; align-items: center;}
+  @include widthLevel05 {   min-width: 500px; align-items: center;}
+
+}
+
+.intro-maps-container {
+  padding-left: 20px;
+  display: flex;
+  @include widthLevel00 { justify-content: flex-start; align-items: flex-start;}
+  justify-content: center;
+
+}
+
+.mapouter {
+  border-radius: 5%;
+  position:relative;
+  text-align:center;
+  align-self: center;
+  @include widthLevel00 { align-self: flex-start;text-align: center;  padding-top: 20px; }
+}
+
+.gmap_canvas {
+  border-radius: 5%;
+  overflow:hidden;
+  background:none!important;
+
+  @include widthLevel00 {   min-width:200px; max-width: 200px; max-height: 200px; }
+
+  @include widthLevel01 {   max-width: 400px; }
+  @include widthLevel02 {   max-width: 400px; }
+  @include widthLevel03 {   min-width: 400px; }
+  @include widthLevel04 {   min-width: 400px; }
+  @include widthLevel05 {   min-width: 400px; }
+
+}
+
+.intro-social-container {
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  @include widthLevel00 { max-width: 100px; padding-left: 20px; padding-top: 20px; }
+  @include widthLevel01 { max-width: 100px; }
+  @include widthLevel02 { max-width: 150px; }
+  @include widthLevel03 { min-width: 90px; }
+  @include widthLevel04 { min-width: 90px; }
+  @include widthLevel05 { min-width: 90px; }
+  max-height: 400px;
+
+}
+.intro-social-element {
+
+
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  align-self: center;
+
+  max-width: 90px;
+  max-height: 90px;
+  &:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+}

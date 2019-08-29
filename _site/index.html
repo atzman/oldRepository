@@ -4,26 +4,26 @@
 <!--  Setting Parameter -->
 <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap" rel="stylesheet">
 
-<!-- For Video Plugin -->
-<!-- <link rel="stylesheet" type="text/css" href="/assets/TosRUs/jquery.tosrus.all.css" />
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
-
-<link rel="stylesheet" href="/css/navigation.css">
-<link rel="stylesheet" href="/css/navigationBurgerbutton.css">
-<link rel="stylesheet" href="/css/news.css">
-<link rel="stylesheet" href="/css/subMenu.css">
-<link rel="stylesheet" href="/css/introduction.css"> -->
-
+<!--  This is the main file which also is needed for the first view -->
 <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/after_scroll_event.css">
+
+<!--  These files will be added after the page has loaded, if a user disabled .js it will be added in a no script tag -->
+<!--  But in order to prevent any FOC bugs we will disable all div classes which should be loaded afterwards          -->
+<style>.after-scroll-top-banner-container {display:none;}</style>
+
+<noscript>
+
+    <link rel="stylesheet" href="/css/after_scroll_event.css">
+
+</noscript>
 
 
 <header>
 
     <div class="navigation-bar transition-opacity navigation-purple">
 
-  <div class="content-container navigation-container">
+  <div class="content-container flex-direction-row navigation-container">
     <div class="navigation-element"><h5><a href="">News</a></h5></div>
     <div class="navigation-element"><h5><a href="">Lennon Room</a></h5></div>
     <div class="navigation-element"><h5><a href="">Zappa Room</a></h5></div>
@@ -34,7 +34,6 @@
   </div>
 
 </div>
-
 
 <div class="navigation-mobile-container">
 
@@ -66,13 +65,14 @@
 <body>
 
   <main>
-    <div class="first-view-container">
-
+    <div class="first-view-container navigation-purple">
+    <!--  Intro is included -->
     <div class="first-view-banner">
 
  <img id="bannerPic" class="thumbnail" src="/assets/images/slider/audio-dj.jpg" alt="image">
 
 </div>
+
 
 <div class="atzman-intro-container transition-opacity">
 
@@ -86,7 +86,49 @@
 
   <div class="banner-text readability-shadow"><h3> Probetraum / Rehearsal / Studio / Bar </h3></div>
 
+
+  <div class="after-scroll-top-banner-container">
+     <div class="content-container flex-direction-row flex-wrap">
+
+        <div class="intro-text-container readability-shadow">
+
+         <h4>Musikproberäume</h4><h5>24m²/34m²</h5><br>
+         <h4>Mo-Fr</h4><h5>14€/h 14:00-22:00</h5><br>
+         <h4>Sa,So & Feiertag</h4><h5>16€/h 10:00 - 22:00</h4><br>
+         <h4>Free Wifi</h4><br>
+         <h4>Bar, Beer & Non Alcoholic</h4><br>
+
+       </div>
+
+       <div class="intro-gallery-container">
+          <img class="intro-gallery-element" src="/assets/images/intro_gallery/lennonraum_quadratic.jpg">
+          <img class="intro-gallery-element" src="/assets/images/intro_gallery/zapparaum_quadratic.jpg">
+          <img class="intro-gallery-element" src="/assets/images/intro_gallery/stueberl_quadratic.jpg">
+       </div>
+
+       <div class="intro-maps-container">
+         <div class="mapouter box-shadow-effect-white">
+           <div class="gmap_canvas">
+             <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=%201050%20Wien%2C%20Jahngasse%2043&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+           </div>
+         </div>
+       </div>
+
+       <div class="intro-social-container readability-shadow">
+         <h4>Visit Us</h4>
+         <img class="intro-social-element" src="/assets/images/social_icons/facebook.svg">
+         <img class="intro-social-element" src="/assets/images/social_icons/twitter.svg">
+         <img class="intro-social-element" src="/assets/images/social_icons/insta.svg">
+         <img class="intro-social-element" src="/assets/images/social_icons/youtube.svg">
+       </div>
+
+    </div>
+
+   </div>
+
+
 </div>
+
 
 
 </div>
